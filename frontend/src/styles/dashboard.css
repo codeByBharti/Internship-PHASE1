@@ -1,0 +1,121 @@
+:root {
+  --primary: #ff6a00;
+  --dark-bg: #0f0f12;
+  --dark-bg-2: #1a1a1f;
+  --card-glass: rgba(255, 255, 255, 0.06);
+  --text-main: #ffffff;
+  --text-muted: #b5b5b5;
+}
+
+/* ===== Global Background ===== */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0f12, #1a1a1f 40%, #2a1305);
+  min-height: 100vh;
+  color: var(--text-main);
+}
+
+/* ===== Dashboard Wrapper ===== */
+.dashboard {
+  padding: 70px 80px;
+  text-align: center;
+}
+
+/* ===== Header ===== */
+.dashboard-title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.dashboard-title span {
+  background: linear-gradient(90deg, #ff6a00, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
+/* ===== Cards Layout ===== */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ===== Card ===== */
+/* Cards Layout */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+/* Base Card */
+.card {
+  width: 320px;
+  padding: 35px 30px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  transition: all 0.5s ease;   /* smoother */
+  text-align: center;
+  border: 2px solid transparent;  /* visible border */
+}
+
+/* Smooth Hover */
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* ========== AMBULANCE CARD (Orange) ========== */
+.card.ambulance {
+  border-color: rgba(255, 120, 0, 0.5);
+}
+
+.card.ambulance .card-title,
+.card.ambulance .card-value {
+  color: #ff7800;
+}
+
+.card.ambulance:hover {
+  box-shadow: 0 0 30px rgba(255, 120, 0, 0.3);
+}
+
+/* ========== HOSPITAL CARD (Teal/Green) ========== */
+.card.hospital {
+  border-color: rgba(0, 200, 160, 0.5);
+}
+
+.card.hospital .card-title,
+.card.hospital .card-value {
+  color: #00c8a0;
+}
+
+.card.hospital:hover {
+  box-shadow: 0 0 30px rgba(0, 200, 160, 0.3);
+}
+
+/* ========== HOTSPOT CARD (Purple) ========== */
+.card.hotspot {
+  border-color: rgba(150, 80, 255, 0.5);
+}
+
+.card.hotspot .card-title,
+.card.hotspot .card-value {
+  color: #9650ff;
+}
+
+.card.hotspot:hover {
+  box-shadow: 0 0 30px rgba(150, 80, 255, 0.3);
+}
+
