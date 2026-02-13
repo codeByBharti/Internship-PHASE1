@@ -1,16 +1,82 @@
-# React + Vite
+**AI-Based Emergency Response & Risk Prediction System**
+*Overview*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a full-stack application that predicts hospital emergency risk and provides analytics such as accident hotspots, ambulance load, alerts, and trends.
 
-Currently, two official plugins are available:
+*Tech Stack:*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Backend: Node.js, Express, MongoDB
 
-## React Compiler
+Frontend: React.js (Vite)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Database: MongoDB
 
-## Expanding the ESLint configuration
+*How to Run the Project*
+1. Clone the Repository
+git clone <your-repository-link>
+cd <project-folder>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Run Backend
+
+Go to backend folder:
+
+cd backend
+
+Start backend server:
+
+npm run dev
+
+
+Backend will run on:
+
+http://localhost:5000
+
+
+To confirm backend is working, open in browser:
+
+http://localhost:5000/health
+
+
+If it shows "API is running", backend is working correctly.
+
+3. Run Frontend
+
+Open a new terminal and go to frontend folder:
+
+cd frontend
+
+npm run dev
+
+
+Frontend will run on:
+
+http://localhost:5173
+
+How to Test the Application
+
+Make sure backend is running on port 5000.
+
+Make sure frontend is running on port 5173.
+
+Open:
+
+http://localhost:5173
+
+
+You should see the dashboard displaying:
+
+Hospital Risk Index
+
+Accident Count
+
+Active Ambulances
+
+Average Hospital Load
+
+Hotspots
+
+Alerts
+
+Trends
+
+If data is visible and there are no console errors, the system is working properly.
